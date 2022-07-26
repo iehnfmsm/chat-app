@@ -8,51 +8,7 @@
 </div>
 
 <div class="messages">
-  <div class = "message">
-    <div class = "message-top">
-      <div class = "messsage-name">
-      Tom
-      </div>
-      <div class = "message-date">
-      2022/07/25(Wed) 17:51:34
-      </div>
-    </div>
-    <div class = "message-bottom">
-      <div class = "message-content">
-      おはよう
-      </div>
-    </div>
-  </div>
-    <div class = "message">
-    <div class = "message-top">
-      <div class = "messsage-name">
-      Bob
-      </div>
-      <div class = "message-date">
-      2022/07/25(Wed) 17:51:34
-      </div>
-    </div>
-    <div class = "message-bottom">
-      <div class = "message-content">
-      こんにちは
-      </div>
-    </div>
-  </div>
-    <div class = "message">
-    <div class = "message-top">
-      <div class = "messsage-name">
-      Nick
-      </div>
-      <div class = "message-date">
-      2022/07/25(Wed) 17:51:34
-      </div>
-    </div>
-    <div class = "message-bottom">
-      <div class = "message-content">
-      こんばんは
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
